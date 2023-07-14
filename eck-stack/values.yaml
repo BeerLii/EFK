@@ -9,6 +9,8 @@ eck-elasticsearch:
   # This is adjusting the full name of the elasticsearch resource so that both the eck-elasticsearch
   # and the eck-kibana chart work together by default in the eck-stack chart.
   fullnameOverride: elasticsearch
+  annotations:
+    eck.k8s.elastic.co/license: basic
 
 # If enabled, will use the eck-kibana chart and deploy a Kibana resource.
 #
@@ -19,6 +21,8 @@ eck-kibana:
     # both the eck-elasticsearch and the eck-kibana chart work together by default in the eck-stack chart.
     elasticsearchRef:
       name: elasticsearch
+  annotations:
+    eck.k8s.elastic.co/license: basic
 
 # If enabled, will use the eck-agent chart and deploy an Elastic Agent instance.
 #
