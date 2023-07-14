@@ -21,7 +21,7 @@ spec:
       name: default
       podTemplate:
         spec:
-        - containers:
+          containers:
           - name: elasticsearch
             resources:
               limits:
