@@ -177,6 +177,9 @@ nodeSets:
     # Only the commonly overridden/used fields will be noted below.
     # 
     spec:
+    - volumes:
+      - name: elasticsearch-data
+        emptyDir: {}
 
     # If specified, the pod's scheduling constraints
     # https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-advanced-node-scheduling.html
@@ -312,6 +315,4 @@ nodeSets:
 
     # List of volumes that can be mounted by containers belonging to the pod.
     # https://kubernetes.io/docs/concepts/storage/volumes
-    volumes:
-      - name: elasticsearch-data
-        emptyDir: {}
+

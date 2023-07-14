@@ -21,16 +21,16 @@ spec:
       name: default
       podTemplate:
         spec:
-          containers:
+        - containers:
           - name: elasticsearch
             resources:
               limits:
                 memory: 1Gi
               requests:
                 memory: 1Gi
-        volumes:
-        - emptyDir: {}
-          name: elasticsearch-data
+          volumes:
+          - emptyDir: {}
+            name: elasticsearch-data
 ---
 # Source: eck-stack/charts/eck-kibana/templates/kibana.yaml
 apiVersion: kibana.k8s.elastic.co/v1
