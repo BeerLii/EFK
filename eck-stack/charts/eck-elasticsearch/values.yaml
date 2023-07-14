@@ -314,4 +314,4 @@ nodeSets:
     # https://kubernetes.io/docs/concepts/storage/volumes
     volumes:
       - name: elasticsearch-data
-        emptyDir: { }
+        emptyDir: {}
