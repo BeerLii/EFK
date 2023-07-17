@@ -1,0 +1,29 @@
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Moved to to location
+apiVersion: v2
+appVersion: 4.0.0
+dependencies:
+- condition: minio.enabled
+  name: minio
+  repository: https://helm.min.io/
+  version: 8.x.x
+- condition: logGenerator.enabled
+  name: log-generator
+  repository: https://kube-logging.github.io/helm-charts
+  version: 0.2.x
+description: Logging operator demo application
+home: https://kube-logging.github.io
+keywords:
+- logging
+- fluentd
+- fluentbit
+- syslog-ng
+kubeVersion: '>=1.16.0-0'
+name: logging-demo
+sources:
+- https://github.com/kube-logging/logging-operator
+- https://github.com/kube-logging/helm-charts/tree/main/charts/logging-demo
+type: application
+version: 4.0.3

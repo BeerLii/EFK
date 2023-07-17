@@ -1,0 +1,20 @@
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Moved to to location
+  artifacthub.io/images: |
+    - name: log-generator
+      image: ghcr.io/kube-logging/log-generator:v0.4.1
+apiVersion: v2
+appVersion: v0.4.1
+description: A Helm chart for Log-generator
+home: https://kube-logging.github.io
+keywords:
+- logging
+kubeVersion: '>=1.16.0-0'
+name: log-generator
+sources:
+- https://github.com/kube-logging/log-generator
+- https://github.com/kube-logging/helm-charts/tree/main/charts/log-generator
+type: application
+version: 0.2.3

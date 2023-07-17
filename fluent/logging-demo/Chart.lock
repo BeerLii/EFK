@@ -1,0 +1,9 @@
+dependencies:
+- name: minio
+  repository: https://helm.min.io/
+  version: 8.0.10
+- name: log-generator
+  repository: https://kube-logging.github.io/helm-charts
+  version: 0.2.3
+digest: sha256:8a2a929c2fd8ada75ecb18a318193f8289606854e2849122d432a2fef74cedd5
+generated: "2023-05-06T06:41:00.390681+02:00"
