@@ -62,7 +62,7 @@ spec:
       timekey_use_utc: true
       timekey_wait: 30s
     host: elasticsearch-es-http.elastic-system.svc.cluster.local
-    password: 5m65o9b02j9SU6x7XGv5Ifse
+    password: "5m65o9b02j9SU6x7XGv5Ifse"
     port: 9200
     scheme: https
     ssl_verify: false
