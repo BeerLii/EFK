@@ -39,7 +39,11 @@ fluentbit: {}
 # -- Flag to disable fluentd completely
 fluentdDisabled: false
 # -- Fluentd configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentd_types/
-fluentd: {}
+fluentd:
+  disablePvc: true
+  bufferStorageVolume:
+    hostPath:
+      path: ""
 # 20Gi persistent storage is configured for fluentd by default.
 # Here is an example, on how to override it:
 #  bufferStorageVolume:
