@@ -7,7 +7,7 @@ fullnameOverride: ""
 
 tls:
   # -- Enable secure connection between fluentd and fluent-bit
-  enabled: true
+  enabled: false
 
   # -- Specified secret name, which contain tls certs
   fluentdSecretName: ""
@@ -34,7 +34,9 @@ flowConfigOverride: ""
 # -- Flag to disable fluentbit completely
 fluentbitDisabled: false
 # -- Fluent-bit configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentbit_types/
-fluentbit: { }
+fluentbit:
+  annotations:
+    fluent-setup/enable: true
 
 # -- Flag to disable fluentd completely
 fluentdDisabled: false
@@ -129,7 +131,7 @@ clusterOutputs:
         ssl_verify: false
         ssl_version: TLSv1_2
         user: elastic
- #       index_name: nginx
+        index_name: nginx
         password:
           valueFrom:
             secretKeyRef:
