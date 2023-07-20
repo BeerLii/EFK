@@ -36,7 +36,7 @@ fluentbitDisabled: false
 # -- Fluent-bit configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentbit_types/
 fluentbit:
   annotations:
-    fluent-setup/enable: true
+    fluent-setup/enable: "true"
 
 # -- Flag to disable fluentd completely
 fluentdDisabled: false
