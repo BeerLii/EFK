@@ -111,10 +111,10 @@ enableRecreateWorkloadOnImmutableFieldChange: false
 clusterFlows:
   - name: nginx-pods
     spec:
-      filters:
-        - parser:
-            parse:
-              type: nginx
+#      filters:
+#        - parser:
+#            parse:
+#              type: nginx
       match:
         - select:
             namespaces:
