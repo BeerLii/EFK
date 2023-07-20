@@ -107,8 +107,14 @@ enableRecreateWorkloadOnImmutableFieldChange: false
 
 # -- ClusterFlows to deploy
 clusterFlows:
-  - name: all-pods
+  - name: nginx-pods
     spec:
+      match:
+        - select:
+            namespaces:
+              - default
+            labels:
+              app: nginx-log
       globalOutputRefs:
         - es
 
