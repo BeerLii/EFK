@@ -129,6 +129,7 @@ clusterOutputs:
         ssl_verify: false
         ssl_version: TLSv1_2
         user: elastic
+        index_name: nginx
         password:
           valueFrom:
             secretKeyRef:

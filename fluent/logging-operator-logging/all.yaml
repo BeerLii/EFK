@@ -106,3 +106,27 @@ spec:
     disablePvc: true
   clusterDomain: cluster.local
   controlNamespace: default
+
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: logging
+  namespace: sub-argocd
+spec:
+  destination:
+    name: ''
+    namespace: logging
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: fluent/logging-operator-logging
+    repoURL: 'git@github.com:BeerLii/EFK.git'
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
