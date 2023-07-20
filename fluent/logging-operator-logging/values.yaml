@@ -111,6 +111,12 @@ enableRecreateWorkloadOnImmutableFieldChange: false
 clusterFlows:
   - name: nginx-pods
     spec:
+      filters:
+        - parser:
+            remove_key_name_field: true
+            reserve_data: true
+            parse:
+              type: nginx
 #      filters:
 #        - parser:
 #            parse:
