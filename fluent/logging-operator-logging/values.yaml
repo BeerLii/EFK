@@ -135,6 +135,42 @@ clusterFlows:
               app: nginx-log
       globalOutputRefs:
         - es
+  - name: nginx-pods
+      spec:
+        filters:
+            - parser:
+              remove_key_name_field: true
+              reserve_data: true
+              parse:
+                type: nginx
+        #      filters:
+        #        - parser:
+        #            parse:
+        #              type: nginx
+        match:
+          - select:
+              namespaces:
+                - default
+              labels:
+                app: nginx-log
+        globalOutputRefs:
+          - es
+  - name: my-stdout
+    spec:
+#      filters:
+#        - parser:
+#            parse:
+#              type: nginx
+      match:
+        - select:
+            namespaces:
+              - default
+            labels:
+              app: nginx-stdout
+      filters:
+        - stdout: { }
+      localOutputRefs:
+        - exchange
 
 # -- ClusterOutputs to deploy
 clusterOutputs:
