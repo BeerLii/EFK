@@ -37,6 +37,10 @@ fluentbitDisabled: false
 fluentbit:
   annotations:
     fluent-setup/enable: "true"
+  image:
+    pullPolicy: Always
+    repository: fluent/fluent-bit
+    tag: latest-debug
 
 # -- Flag to disable fluentd completely
 fluentdDisabled: false
