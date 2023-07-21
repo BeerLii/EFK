@@ -136,22 +136,6 @@ clusterFlows:
       globalOutputRefs:
         - es
 
-  - name: my-stdout
-    spec:
-#      filters:
-#        - parser:
-#            parse:
-#              type: nginx
-      match:
-        - select:
-            namespaces:
-              - default
-            labels:
-              app: nginx-stdout
-      filters:
-        - stdout: { }
-      localOutputRefs:
-        - exchange
 
 # -- ClusterOutputs to deploy
 clusterOutputs:
