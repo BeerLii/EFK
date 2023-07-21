@@ -37,6 +37,7 @@ fluentbitDisabled: false
 fluentbit:
   annotations:
     fluent-setup/enable: "true"
+  logLevel: debug
   image:
     pullPolicy: Always
     repository: fluent/fluent-bit
