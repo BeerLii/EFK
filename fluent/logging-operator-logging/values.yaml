@@ -46,6 +46,7 @@ fluentbit:
 fluentdDisabled: false
 # -- Fluentd configurations https://kube-logging.github.io/docs/configuration/crds/v1beta1/fluentd_types/
 fluentd:
+  logLevel: debug
   disablePvc: true
   bufferStorageVolume:
     hostPath:
