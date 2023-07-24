@@ -368,8 +368,6 @@ config:
         Path /var/log/containers/*.log
         multiline.parser docker, cri
         Tag kube.*
-        Buffer_Chunk_Size 100K
-        Buffer_Max_Size 100K
         Mem_Buf_Limit 5MB
         Skip_Long_Lines On
 
